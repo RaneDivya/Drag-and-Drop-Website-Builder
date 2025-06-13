@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Website Builder</title>
+    <!-- CUSTOM LINKS -->
+     <link rel="stylesheet" href="style/style.css">
+     <link rel="stylesheet" href="style/general.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Website Builder</h1>
+    </header>
+    <main>
+        <div id="builder" class="builder d-flex">
+            <div class="toolbox-container d-flex">
+                <div id="toolbox" class="toolbox">
+                    <h3>Add Elements</h3>
+                    <div draggable="true" data-type="text">Text</div>
+                    <div draggable="true" data-type="image">Image</div>
+                    <div draggable="true" data-type="button">Button</div>
+                </div>
+
+                <div class="editor">
+                    <h3>Edit Properties</h3>
+                    <form id="propertiesForm" class="properties d-flex">
+                        <label>Text:</label>
+                        <div class="d-flex input-container">
+                            <input type="text" id="editText"><br>
+                        </div>
+
+                        <label>Font Size:</label>
+                        <div class="d-flex input-container">
+                            <input type="number" id="editFontSize"><br>
+                        </div>
+
+                        <label>Color:</label>
+                        <input type="color" id="editColor"><br>
+
+                        <label>Image URL:</label>
+                        <div class="d-flex input-container">
+                            <input type="text" id="editImageUrl"><br>
+                        </div>
+                        
+                        <div class="d-flex buttons-grp">
+                            <button type="submit" class="d-flex">Apply</button>
+                            <button type="button" id="deleteBtn" class="d-flex">Delete</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div id="canvas" class="canvas"></div>
+        </div>
+    </main>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
